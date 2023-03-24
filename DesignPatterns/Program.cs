@@ -13,6 +13,7 @@
     using Behavioral.Observer;
     using Behavioral.Observer.Another;
     using Behavioral.State;
+    using Behavioral.Strategy;
 
     internal class Program
     {
@@ -35,7 +36,8 @@
             //MementoClient.Run();
             //ObserverClient.Run();
             //AnotherObserverExampleClient.Run();
-            StateClient.Run();
+            //StateClient.Run();
+            StrategyClient.Run();
         }
     }
 }
