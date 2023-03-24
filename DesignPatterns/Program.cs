@@ -9,6 +9,7 @@
     using Behavioral.Chain_of_responsibility;
     using Behavioral.Command;
     using Behavioral.Mediator;
+    using Behavioral.Memento;
 
     internal class Program
     {
@@ -22,11 +23,13 @@
             //PrototypeClient.Run();
             //BuilderClient.Run();
 
+
             ///Behavioral patterns
             
             //ChainOfResponsibilityClient.Run();
             //CommandClient.Run();
-            MediatorClient.Run();
+            //MediatorClient.Run();
+            MementoClient.Run();
         }
     }
 }
