@@ -7,6 +7,7 @@
     using Creational.Builder;
 
     using Behavioral.Chain_of_responsibility;
+    using Behavioral.Command;
 
     internal class Program
     {
@@ -22,7 +23,8 @@
 
             ///Behavioral patterns
             
-            ChainOfResponsibilityClient.Run();
+            //ChainOfResponsibilityClient.Run();
+            CommandClient.Run();
         }
     }
 }
