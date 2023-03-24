@@ -8,6 +8,7 @@
 
     using Behavioral.Chain_of_responsibility;
     using Behavioral.Command;
+    using Behavioral.Mediator;
 
     internal class Program
     {
@@ -24,7 +25,8 @@
             ///Behavioral patterns
             
             //ChainOfResponsibilityClient.Run();
-            CommandClient.Run();
+            //CommandClient.Run();
+            MediatorClient.Run();
         }
     }
 }
