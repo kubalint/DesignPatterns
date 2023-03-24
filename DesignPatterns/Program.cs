@@ -12,6 +12,7 @@
     using Behavioral.Memento;
     using Behavioral.Observer;
     using Behavioral.Observer.Another;
+    using Behavioral.State;
 
     internal class Program
     {
@@ -33,7 +34,8 @@
             //MediatorClient.Run();
             //MementoClient.Run();
             //ObserverClient.Run();
-            AnotherObserverExampleClient.Run();
+            //AnotherObserverExampleClient.Run();
+            StateClient.Run();
         }
     }
 }
