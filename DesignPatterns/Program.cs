@@ -10,6 +10,8 @@
     using Behavioral.Command;
     using Behavioral.Mediator;
     using Behavioral.Memento;
+    using Behavioral.Observer;
+    using Behavioral.Observer.Another;
 
     internal class Program
     {
@@ -29,7 +31,9 @@
             //ChainOfResponsibilityClient.Run();
             //CommandClient.Run();
             //MediatorClient.Run();
-            MementoClient.Run();
+            //MementoClient.Run();
+            //ObserverClient.Run();
+            AnotherObserverExampleClient.Run();
         }
     }
 }
