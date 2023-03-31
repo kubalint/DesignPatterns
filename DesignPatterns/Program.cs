@@ -1,5 +1,6 @@
 ﻿using DesignPatterns.Behavioral.Template_Method;
 using DesignPatterns.Behavioral.Visitor;
+using DesignPatterns.Structural.Adapter;
 
 namespace DesignPatterns
 {
@@ -42,7 +43,11 @@ namespace DesignPatterns
             //StateClient.Run();
             //StrategyClient.Run();
             //TemplateMethodClient.Run();
-            VisitorClient.Run();
+            //VisitorClient.Run();
+
+            ///Structural patterns
+
+            AdapterClient.Run();
         }
     }
 }
