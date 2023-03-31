@@ -23,3 +23,7 @@ global using DesignPatterns.Structural.Bridge;
 global using DesignPatterns.Structural.Composite;
 global using DesignPatterns.Structural.Decorator;
 global using DesignPatterns.Structural.Facade;
+global using DesignPatterns.Structural.Flyweight;
+global using DesignPatterns.Structural.Proxy;
+global using System.Diagnostics;
+
