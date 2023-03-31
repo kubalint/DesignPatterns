@@ -1,4 +1,7 @@
-﻿global using DesignPatterns.Creational.FactoryMethod;
+﻿global using System;
+global using System.Collections.Generic;
+
+global using DesignPatterns.Creational.FactoryMethod;
 global using DesignPatterns.Creational.AbstractFactory;
 global using DesignPatterns.Creational.Singleton;
 global using DesignPatterns.Creational.Prototype;
