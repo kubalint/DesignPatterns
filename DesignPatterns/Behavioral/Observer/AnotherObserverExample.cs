@@ -1,102 +1,92 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace DesignPatterns.Behavioral.Observer.Another;
 
-namespace DesignPatterns.Behavioral.Observer.Another
+// Define the observer interface
+public interface IObserver
 {
-    using System;
-    using System.Collections.Generic;
+    void Update(float temperature, float humidity, float pressure);
+}
 
-    // Define the observer interface
-    public interface IObserver
+// Define the subject interface
+public interface ISubject
+{
+    void Attach(IObserver observer);
+    void Detach(IObserver observer);
+    void Notify();
+}
+
+// Define a concrete subject
+public class WeatherData : ISubject
+{
+    private List<IObserver> observers = new List<IObserver>();
+    private float temperature;
+    private float humidity;
+    private float pressure;
+
+    public void Attach(IObserver observer)
     {
-        void Update(float temperature, float humidity, float pressure);
+        observers.Add(observer);
     }
 
-    // Define the subject interface
-    public interface ISubject
+    public void Detach(IObserver observer)
     {
-        void Attach(IObserver observer);
-        void Detach(IObserver observer);
-        void Notify();
+        observers.Remove(observer);
     }
 
-    // Define a concrete subject
-    public class WeatherData : ISubject
+    public void Notify()
     {
-        private List<IObserver> observers = new List<IObserver>();
-        private float temperature;
-        private float humidity;
-        private float pressure;
-
-        public void Attach(IObserver observer)
+        foreach (IObserver observer in observers)
         {
-            observers.Add(observer);
-        }
-
-        public void Detach(IObserver observer)
-        {
-            observers.Remove(observer);
-        }
-
-        public void Notify()
-        {
-            foreach (IObserver observer in observers)
-            {
-                observer.Update(temperature, humidity, pressure);
-            }
-        }
-
-        public void SetMeasurements(float temperature, float humidity, float pressure)
-        {
-            this.temperature = temperature;
-            this.humidity = humidity;
-            this.pressure = pressure;
-            Notify();
+            observer.Update(temperature, humidity, pressure);
         }
     }
 
-    // Define a concrete observer
-    public class CurrentConditionsDisplay : IObserver
+    public void SetMeasurements(float temperature, float humidity, float pressure)
     {
-        private float temperature;
-        private float humidity;
-        private ISubject weatherData;
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        Notify();
+    }
+}
 
-        public CurrentConditionsDisplay(ISubject weatherData)
-        {
-            this.weatherData = weatherData;
-            weatherData.Attach(this);
-        }
+// Define a concrete observer
+public class CurrentConditionsDisplay : IObserver
+{
+    private float temperature;
+    private float humidity;
+    private ISubject weatherData;
 
-        public void Update(float temperature, float humidity, float pressure)
-        {
-            this.temperature = temperature;
-            this.humidity = humidity;
-            Display();
-        }
-
-        public void Display()
-        {
-            Console.WriteLine("Current conditions: {0}°C degrees and {1}% humidity",
-                temperature, humidity);
-        }
+    public CurrentConditionsDisplay(ISubject weatherData)
+    {
+        this.weatherData = weatherData;
+        weatherData.Attach(this);
     }
 
-    // Example usage
-   
-    public static class AnotherObserverExampleClient
+    public void Update(float temperature, float humidity, float pressure)
     {
-        public static void Run()
-        {
-            WeatherData weatherData = new WeatherData();
-            CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
+        this.temperature = temperature;
+        this.humidity = humidity;
+        Display();
+    }
 
-            weatherData.SetMeasurements(10, 65, 30.4f);
-            weatherData.SetMeasurements(22, 70, 29.2f);
-            weatherData.SetMeasurements(28, 90, 29.2f);
-        }
+    public void Display()
+    {
+        Console.WriteLine("Current conditions: {0}°C degrees and {1}% humidity",
+            temperature, humidity);
+    }
+}
+
+// Example usage
+
+public static class AnotherObserverExampleClient
+{
+    public static void Run()
+    {
+        WeatherData weatherData = new WeatherData();
+        CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
+
+        weatherData.SetMeasurements(10, 65, 30.4f);
+        weatherData.SetMeasurements(22, 70, 29.2f);
+        weatherData.SetMeasurements(28, 90, 29.2f);
     }
 }

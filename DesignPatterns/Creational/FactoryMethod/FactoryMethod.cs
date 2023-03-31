@@ -1,6 +1,4 @@
-﻿namespace DesignPatterns.Creational.FactoryMethod
-{
-    using System;
+﻿namespace DesignPatterns.Creational.FactoryMethod;
 
     // Abstract class for character factories
     public abstract class CharacterFactory<T> where T : Character
@@ -118,4 +116,3 @@
     In the FactoryMethodClient class, we create instances of Warrior and Mage characters using their respective factories, 
     and we can access their properties directly without casting.
     */
-}

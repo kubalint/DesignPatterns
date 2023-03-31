@@ -1,4 +1,6 @@
-﻿class CarFlyweight
+﻿namespace DesignPatterns.Structural.Flyweight;
+
+class CarFlyweight
 {
     public string Model { get; private set; }
     public string Color { get; private set; }

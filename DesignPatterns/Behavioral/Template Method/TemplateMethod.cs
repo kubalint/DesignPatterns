@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DesignPatterns.Behavioral.Template_Method
-{
-    using System;
+﻿namespace DesignPatterns.Behavioral.Template_Method;
 
     public abstract class AbstractClass
     {
@@ -65,4 +57,4 @@ namespace DesignPatterns.Behavioral.Template_Method
     For a "real-life" usage of it, see EcommerceTemplateMethod.cs
 
      */
-}
+
