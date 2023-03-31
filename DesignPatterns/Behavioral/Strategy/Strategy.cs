@@ -117,12 +117,13 @@ namespace DesignPatterns.Behavioral.Strategy
         public static void Run()
         {
             int[] unsortedArray = GetNumbers();
+            int[] unsortedArray2 = unsortedArray.Select(x => x).ToArray();
             
             Sorter sorter = new Sorter(new BubbleSortStrategy());
             sorter.Sort(unsortedArray);
-
+            
             sorter.SetStrategy(new QuickSortStrategy());
-            sorter.Sort(unsortedArray);
+            sorter.Sort(unsortedArray2);
         }
 
         //Helper
@@ -131,7 +132,7 @@ namespace DesignPatterns.Behavioral.Strategy
         {
             var numbers = new List<int>();
 
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 100000; i++)
             {
                 var random = new Random();
                 var newNumber = random.Next(0, int.MaxValue);

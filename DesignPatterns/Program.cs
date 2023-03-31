@@ -1,4 +1,6 @@
-﻿namespace DesignPatterns
+﻿using DesignPatterns.Behavioral.Template_Method;
+
+namespace DesignPatterns
 {
     using Creational.FactoryMethod;
     using Creational.AbstractFactory;
@@ -37,7 +39,8 @@
             //ObserverClient.Run();
             //AnotherObserverExampleClient.Run();
             //StateClient.Run();
-            StrategyClient.Run();
+            //StrategyClient.Run();
+            TemplateMethodClient.Run();
         }
     }
 }
