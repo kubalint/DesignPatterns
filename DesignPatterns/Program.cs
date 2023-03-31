@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.Behavioral.Template_Method;
 using DesignPatterns.Behavioral.Visitor;
 using DesignPatterns.Structural.Adapter;
+using DesignPatterns.Structural.Bridge;
 
 namespace DesignPatterns
 {
@@ -47,7 +48,8 @@ namespace DesignPatterns
 
             ///Structural patterns
 
-            AdapterClient.Run();
+            //AdapterClient.Run();
+            BridgeClient.Run();
         }
     }
 }
