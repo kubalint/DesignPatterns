@@ -1,59 +1,30 @@
-﻿using DesignPatterns.Behavioral.Template_Method;
-using DesignPatterns.Behavioral.Visitor;
-using DesignPatterns.Structural.Adapter;
-using DesignPatterns.Structural.Bridge;
-using DesignPatterns.Structural.Composite;
-using DesignPatterns.Structural.Decorator;
-
-namespace DesignPatterns
-{
-    using Creational.FactoryMethod;
-    using Creational.AbstractFactory;
-    using Creational.Singleton;
-    using Creational.Prototype;
-    using Creational.Builder;
-
-    using Behavioral.Chain_of_responsibility;
-    using Behavioral.Command;
-    using Behavioral.Mediator;
-    using Behavioral.Memento;
-    using Behavioral.Observer;
-    using Behavioral.Observer.Another;
-    using Behavioral.State;
-    using Behavioral.Strategy;
-
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            ///Creational patterns
-            
-            //FactoryMethodClient.Run();
-            //AbstractFactoryClient.Run();
-            //SingletonClient.Run();
-            //PrototypeClient.Run();
-            //BuilderClient.Run();
+﻿
+    ///Creational patterns
+    
+    //FactoryMethodClient.Run();
+    //AbstractFactoryClient.Run();
+    //SingletonClient.Run();
+    //PrototypeClient.Run();
+    //BuilderClient.Run();
 
 
-            ///Behavioral patterns
-            
-            //ChainOfResponsibilityClient.Run();
-            //CommandClient.Run();
-            //MediatorClient.Run();
-            //MementoClient.Run();
-            //ObserverClient.Run();
-            //AnotherObserverExampleClient.Run();
-            //StateClient.Run();
-            //StrategyClient.Run();
-            //TemplateMethodClient.Run();
-            //VisitorClient.Run();
+    ///Behavioral patterns
+    
+    //ChainOfResponsibilityClient.Run();
+    //CommandClient.Run();
+    //MediatorClient.Run();
+    //MementoClient.Run();
+    //ObserverClient.Run();
+    //AnotherObserverExampleClient.Run();
+    //StateClient.Run();
+    //StrategyClient.Run();
+    //TemplateMethodClient.Run();
+    //VisitorClient.Run();
 
-            ///Structural patterns
+    ///Structural patterns
 
-            //AdapterClient.Run();
-            //BridgeClient.Run();
-            //CompositeClient.Run();
-            DecoratorClient.Run();
-        }
-    }
-}
+    //AdapterClient.Run();
+    //BridgeClient.Run();
+    //CompositeClient.Run();
+    //DecoratorClient.Run();
+    FacadeClient.Run();
